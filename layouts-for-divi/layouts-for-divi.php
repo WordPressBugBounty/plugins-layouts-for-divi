@@ -4,7 +4,7 @@
  * Plugin Name: Layouts for Divi
  * Plugin URI: https://www.techeshta.com/product/layouts-for-divi/
  * Description: Beautifully designed, Free templates, Hand-crafted for popular Divi page builder.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Techeshta
  * Author URI: https://www.techeshta.com
  * License: GPLv2 or later

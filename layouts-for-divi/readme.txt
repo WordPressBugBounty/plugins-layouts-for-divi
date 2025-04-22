@@ -2,9 +2,9 @@
 Contributors: techeshta, alkesh7, vastarpara, hadihirpara
 Tags: divi layouts, divi layouts addon, free divi layouts, divi layouts module, divi website templates, free divi templates, landing page templates, free divi layouts packs 
 Requires at least: 4.4
-Tested up to: 6.6.1
+Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,6 +172,11 @@ You can reach out via the official [support forum](https://wordpress.org/support
 4. Layouts for Divi - Install Preview
 
 == Changelog ==
+
+= 1.1.2 =
+Release date: April 22nd, 2025
+
+* [Updated] Latest WordPress 6.8 compatibility Check
 
 = 1.1.1 =
 Release date: July 26th, 2024
