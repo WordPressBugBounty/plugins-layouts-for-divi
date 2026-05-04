@@ -1,10 +1,10 @@
 === Layouts for Divi ===
 Contributors: techeshta, alkesh7, vastarpara, hadihirpara
-Tags: divi layouts, divi layouts addon, free divi layouts, divi layouts module, divi website templates, free divi templates, landing page templates, free divi layouts packs 
-Requires at least: 4.4
-Tested up to: 6.8
+Tags: divi, divi templates, divi page builder, page builder, landing page
+Requires at least: 5.8
+Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,11 +12,11 @@ Layouts for Divi is a beautifully designed free layout for famous WordPress Divi
 
 == Description ==
 
-Layouts for Divi is an effective and user-friendly way to create a one-page WordPress website. A Divi addon gives you a top-niche ready-made landing page or layouts for your favorite WordPress Divi page builder. It is a flexible and straightforward way to import your WordPress site via one-click 'Import Template' or 'Create New Page.'
- 
-Layouts for Divi plugin comes with precisely designed 30+ layouts for all types of start-up businesses. It is a one-stop solution for your one-page professional WordPress websites. You can build a store that matches your brand.
- 
-It is the perfect choice for your business. Users will love your site because it gives them a unique user experience (UX) and User Interface (UI). Whether you are a beginner, WordPress user, designer, or developer, it's a user-friendly Layout plugin. No additional coding skills are required.
+Layouts for Divi Templates is an effective and user-friendly way to create a one-page WordPress website. This Divi addon gives you top-niche ready-made Layouts for Divi Templates including landing pages and layouts for your favorite WordPress Divi page builder. It is a flexible and straightforward way to import your WordPress site via one-click 'Import Template' or 'Create New Page.'
+
+Layouts for Divi Templates plugin comes with precisely designed 30+ layouts for all types of start-up businesses. It is a one-stop solution for your one-page professional WordPress websites. You can build a store that matches your brand using our stunning Divi Templates.
+
+It is the perfect choice for your business. Users will love your site because it gives them a unique user experience (UX) and User Interface (UI). Whether you are a beginner, WordPress user, designer, or developer, Layouts for Divi Templates is a user-friendly layout plugin. No additional coding skills are required.
 
 <strong>[Live Demo](https://layoutsfordivibuilder.com/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivibuilder)</strong>
 
@@ -38,9 +38,9 @@ Layouts for Divi plugin suitable for all kinds of one-page WordPress websites. B
 * Wedding Website
 * Cleaning Services Website
 * Etc.
- 
+
 ### Precisely Designed 30+ Layouts
- 
+
 We have designed a stunning landing page for you to complete your landing page website in less time. You can use the default settings for each template or modify it as per your need.
 
 - [Home Maintenance](https://layoutsfordivibuilder.com/home-maintenance/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
@@ -80,7 +80,7 @@ We have designed a stunning landing page for you to complete your landing page w
 
 <strong>1. 30+ Layout Templates</strong>
 
-Select the pre-built layout design from up to 30 templates available.
+Select the pre-built Divi layout template design from 30+ templates available.
 
 <strong>2. Default Style and Settings</strong>
 
@@ -88,15 +88,15 @@ Every layout contains a default style and settings with its design—no need to 
 
 <strong>3. Fully Responsive for Any Devices</strong>
 
-It is fully responsive to smartphones, tablets, iPad, laptops, desktop computers, etc.
+All Layouts for Divi Templates are fully responsive for smartphones, tablets, iPad, laptops, desktop computers, etc.
 
 <strong>4. Cross-browser Compatibility</strong>
 
-All templates are compatible with all major browsers like Firefox, Chrome, Opera, Safari, etc.
+All Divi templates are compatible with all major browsers like Firefox, Chrome, Opera, Safari, etc.
 
 <strong>5. Easy To Install, Use, and Customize</strong>
 
-The plugin is user-friendly, with no expertise required. Basic WordPress users can also easily use it.
+The plugin is user-friendly no expertise required. Basic WordPress users can easily use these Divi layout templates
 
 <strong>6. SEO Friendly</strong>
 
@@ -161,7 +161,7 @@ Yes, get over 30+ free ready-to-use websites as of now. You can pick a website t
 = Can I change color or customize imported layouts as per my wish? =
 Yes, of course. Why not! You are free to use/modify it as per your project requirements.
 
-= Where can I ask for help? = 
+= Where can I ask for help? =
 You can reach out via the official [support forum](https://wordpress.org/support/plugin/layouts-for-divi/) on WordPress.org.
 
 == Screenshots ==
@@ -173,15 +173,21 @@ You can reach out via the official [support forum](https://wordpress.org/support
 
 == Changelog ==
 
+= 1.1.3 =
+Release date: May 4th, 2026
+
+* Updated Latest WordPress 6.9 compatibility Check
+* Improved overall plugin security
+
 = 1.1.2 =
 Release date: April 22nd, 2025
 
-* [Updated] Latest WordPress 6.8 compatibility Check
+* Updated Latest WordPress 6.8 compatibility Check
 
 = 1.1.1 =
 Release date: July 26th, 2024
 
-* [Updated] Latest WordPress 6.6.1 compatibility Check
+* Updated Latest WordPress 6.6.1 compatibility Check
 
 = 1.1 =
 Release Date: April 8th, 2024

@@ -1,6 +1,7 @@
 <?php
-
-defined('ABSPATH') || exit;
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 /**
  * Handle Remote API requests.

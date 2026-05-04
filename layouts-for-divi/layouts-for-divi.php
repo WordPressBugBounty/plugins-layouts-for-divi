@@ -1,15 +1,13 @@
 <?php
-
 /**
  * Plugin Name: Layouts for Divi
  * Plugin URI: https://www.techeshta.com/product/layouts-for-divi/
- * Description: Beautifully designed, Free templates, Hand-crafted for popular Divi page builder.
- * Version: 1.1.2
+ * Description: 30+ Free Layouts for Divi Templates. One-click import. No coding skills required.
+ * Version: 1.1.3
  * Author: Techeshta
  * Author URI: https://www.techeshta.com
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- *
  * Text Domain: layouts-for-divi
  * Domain Path: /languages/
  */
@@ -56,15 +54,17 @@ class Layouts_For_Divi {
      * Load files
      */
     public function lfd_include_files() {
-        include_once( LFD_DIR . 'includes/class-layout-importer.php' );
-        include_once( LFD_DIR . 'includes/api/class-layouts-remote.php' );
+        // include_once( LFD_DIR . 'includes/class-layout-importer.php' );
+        // include_once( LFD_DIR . 'includes/api/class-layouts-remote.php' );
+        require_once LFD_DIR . 'includes/class-layout-importer.php';
+        require_once LFD_DIR . 'includes/api/class-layouts-remote.php';
     }
 
     /**
      * @return Loads plugin textdomain
      */
     public function lfd_load_language_files() {
-        load_plugin_textdomain('layouts-for-divi', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        load_plugin_textdomain(LFD_TEXTDOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 
     /**
@@ -91,7 +91,7 @@ class Layouts_For_Divi {
      */
     public function lfd_layouts_widget_fail_load() {
 
-        $screen = get_current_screen();
+        $screen = function_exists('get_current_screen') ? get_current_screen() : null;
         if (isset($screen->parent_file) && 'plugins.php' === $screen->parent_file && 'update' === $screen->id) {
             return;
         }

@@ -1,3 +1,9 @@
+<?php 
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
 <div class="lfd-body">
     <div class="lfd-header">
         <h1 class="wp-heading-inline"><?php esc_html_e('Layouts for Divi', 'layouts-for-divi'); ?></h1>
