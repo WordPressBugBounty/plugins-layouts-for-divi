@@ -2,46 +2,38 @@
 Contributors: techeshta, alkesh7, vastarpara, hadihirpara
 Tags: divi, divi templates, divi page builder, page builder, landing page
 Requires at least: 5.8
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.1.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Layouts for Divi is a beautifully designed free layout for famous WordPress Divi page builders.
+Launch stunning websites in minutes — 30+ professionally crafted Divi layouts, one-click import, zero coding required.
 
 == Description ==
 
-Layouts for Divi Templates is an effective and user-friendly way to create a one-page WordPress website. This Divi addon gives you top-niche ready-made Layouts for Divi Templates including landing pages and layouts for your favorite WordPress Divi page builder. It is a flexible and straightforward way to import your WordPress site via one-click 'Import Template' or 'Create New Page.'
+**Stop starting from scratch.** Layouts for Divi gives you an ever-growing library of pixel-perfect, professionally designed page layouts built exclusively for the Divi Builder. Browse by industry, preview live, and import with a single click — your next website is minutes away.
 
-Layouts for Divi Templates plugin comes with precisely designed 30+ layouts for all types of start-up businesses. It is a one-stop solution for your one-page professional WordPress websites. You can build a store that matches your brand using our stunning Divi Templates.
+Whether you're building a client site on a deadline or launching your own brand, Layouts for Divi removes the hard part. Every template ships with on-brand typography, polished imagery, and smart structure so you spend your time on what matters: your content and your customers.
 
-It is the perfect choice for your business. Users will love your site because it gives them a unique user experience (UX) and User Interface (UI). Whether you are a beginner, WordPress user, designer, or developer, Layouts for Divi Templates is a user-friendly layout plugin. No additional coding skills are required.
+<strong>[See Live Demos →](https://layoutsfordivibuilder.com/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivibuilder)</strong>
 
-<strong>[Live Demo](https://layoutsfordivibuilder.com/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivibuilder)</strong>
+---
 
-### Where Are Layouts for Divi Plugin Useful?
+### Who Is This For?
 
-Layouts for Divi plugin suitable for all kinds of one-page WordPress websites. Below is one small list for which purposes you can use the Layouts for Divi WordPress plugin.
+Layouts for Divi is the perfect companion for everyone who builds with Divi:
 
-* Education Related Website
-* Fitness Related Website
-* Beauty Related Website
-* Fashion Related Website
-* Hotel Business Related Website
-* Digital Agency Website
-* Personal Portfolio Website
-* E-commerce Related Website
-* Traveling Website
-* Landing Page Website
-* Photography Website
-* Wedding Website
-* Cleaning Services Website
-* Etc.
+* **Freelancers & Agencies** — deliver client projects faster without sacrificing quality.
+* **Business Owners** — get a stunning site live without hiring a designer.
+* **Bloggers & Creators** — make a first impression that keeps visitors coming back.
+* **Developers** — use battle-tested layouts as a solid starting point for custom builds.
 
-### Precisely Designed 30+ Layouts
+---
 
-We have designed a stunning landing page for you to complete your landing page website in less time. You can use the default settings for each template or modify it as per your need.
+### 30+ Ready-Made Layouts Across Every Industry
+
+Pick your niche, preview instantly, and import in one click:
 
 - [Home Maintenance](https://layoutsfordivibuilder.com/home-maintenance/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Web App](https://layoutsfordivibuilder.com/web-app/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
@@ -49,18 +41,18 @@ We have designed a stunning landing page for you to complete your landing page w
 - [Education](https://layoutsfordivibuilder.com/education/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Go Hub](https://layoutsfordivibuilder.com/go-hub/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [The Pizzerio](https://layoutsfordivibuilder.com/the-pizzerio/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Web Agency​](https://layoutsfordivibuilder.com/web-agency/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Analytics Landing Page​](https://layoutsfordivibuilder.com/analytics-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Development Agency​](https://layoutsfordivibuilder.com/development-agency/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Education E-learning​](https://layoutsfordivibuilder.com/education-e-learning/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Web Agency](https://layoutsfordivibuilder.com/web-agency/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Analytics Landing Page](https://layoutsfordivibuilder.com/analytics-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Development Agency](https://layoutsfordivibuilder.com/development-agency/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Education E-learning](https://layoutsfordivibuilder.com/education-e-learning/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Marketing Landing Page](https://layoutsfordivibuilder.com/marketing-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Portfolio](https://layoutsfordivibuilder.com/portfolio-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Restaurant](https://layoutsfordivibuilder.com/restaurant/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Super Service Mockup](https://layoutsfordivibuilder.com/super-service-mockup/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Vertigo Web Development](https://layoutsfordivibuilder.com/vertigo-web-development/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Fredo Saas Landing Page](https://layoutsfordivibuilder.com/fredo-saas-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Fredo SaaS Landing Page](https://layoutsfordivibuilder.com/fredo-saas-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Travel Guide](https://layoutsfordivibuilder.com/travel-guide/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- [Blatropt saas Landing Page](https://layoutsfordivibuilder.com/blatropt-saas-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
+- [Blatropt SaaS Landing Page](https://layoutsfordivibuilder.com/blatropt-saas-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Resto](https://layoutsfordivibuilder.com/resto/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Nectar Cafe](https://layoutsfordivibuilder.com/nectar-cafe/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Business Corporate](https://layoutsfordivibuilder.com/business-corporate/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
@@ -74,63 +66,51 @@ We have designed a stunning landing page for you to complete your landing page w
 - [Gym](https://layoutsfordivibuilder.com/gym/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Spa](https://layoutsfordivibuilder.com/spa/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
 - [Mobile App Landing Page](https://layoutsfordivibuilder.com/mobile-app-landing-page/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=layoutsfordivi)
-- More coming soon!
+- More added regularly!
 
-### Powerfully Ultimate Plugin Features
+---
 
-<strong>1. 30+ Layout Templates</strong>
+### Everything You Need, Nothing You Don't
 
-Select the pre-built Divi layout template design from 30+ templates available.
+**One-Click Import** — No uploading, no copying, no confusion. Browse, click Import, and you're done.
 
-<strong>2. Default Style and Settings</strong>
+**Import to Divi Library or Create a New Page** — Bring a layout into your Divi Template Library for reuse, or instantly spin up a brand-new page pre-loaded with your chosen design.
 
-Every layout contains a default style and settings with its design—no need to worry about it if you don't have much design knowledge.
+**Industry Filter** — Sort layouts by category so you go straight to what fits your project: Education, Restaurant, SaaS, Real Estate, Fitness, and more.
 
-<strong>3. Fully Responsive for Any Devices</strong>
+**Fully Responsive** — Every layout looks flawless on phones, tablets, and desktops right out of the box.
 
-All Layouts for Divi Templates are fully responsive for smartphones, tablets, iPad, laptops, desktop computers, etc.
+**Cross-Browser Ready** — Tested on Chrome, Firefox, Safari, Edge, and Opera. Your visitors see perfection regardless of their browser.
 
-<strong>4. Cross-browser Compatibility</strong>
+**SEO-Friendly Markup** — Clean, semantic HTML that search engines love — give your site the ranking head start it deserves.
 
-All Divi templates are compatible with all major browsers like Firefox, Chrome, Opera, Safari, etc.
+**Lightweight & Fast** — Zero bloat. The plugin adds no overhead to your front end; it only loads what's needed in the admin.
 
-<strong>5. Easy To Install, Use, and Customize</strong>
+**No Coding Required** — Seriously. If you can click a mouse, you can build with Layouts for Divi.
 
-The plugin is user-friendly no expertise required. Basic WordPress users can easily use these Divi layout templates
+**Free Forever** — Every layout in the library is 100% free for personal and commercial projects.
 
-<strong>6. SEO Friendly</strong>
+---
 
-Layouts for Divi plugin is built with search engine optimization in mind to ensure better rankings across all search engines.
+### What Makes Layouts for Divi Stand Out?
 
-<strong>7. No Coding Skills Required</strong>
+* 100% free — no hidden fees, no paywalls on core layouts.
+* Category-based filtering to find your perfect match instantly.
+* Live full-page preview before you commit to any import.
+* Regular new layouts added — your library keeps growing.
+* Built by a team that responds to support requests quickly.
 
-You don't need any coding or technical skills to install and use the plugin. It installs just like any other plugin. 
+---
 
-<strong>8. Optimized Performance</strong>
+### Get Help Fast
 
-The plugin is built with performance in mind. So, the clean and optimized code ensures a blazing loading speed of the site.
+We're active and responsive. If you run into anything, head to our [Support Forum](https://wordpress.org/support/plugin/layouts-for-divi/) on WordPress.org or [contact us directly](https://www.techeshta.com/contact-us/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=techeshta).
 
-<strong>9. Fast and High Performance</strong>
+<strong>Note:</strong> Layouts for Divi is an add-on for the [Divi Page Builder](https://www.elegantthemes.com/gallery/divi/) and requires Divi to be installed and active.
 
-Well, optimized and lightweight code that won't hurt your server.
+### Love Layouts for Divi?
 
-### What Makes Layouts for Divi Outstanding?
-
-* It's 100% free for your personal and client's projects.
-* Pick from the collections and one-click to import.
-* Category-wise filter to choose best for your digital agency.
-* Complete your landing page website in less than 5 minutes.
-* Clean code, layout, and design.
-
-### Technical Support
-
-We're active for any support issues and feature suggestions. So, I hope you will love it. If you have any more questions, visit our support on the [Plugin's Forum](https://wordpress.org/support/plugin/layouts-for-divi/). Feel free to [contact us](https://www.techeshta.com/contact-us/?utm_medium=wp.org&utm_source=wordpressorg&utm_campaign=readme&utm_content=techeshta) if you want any custom widgets for your site.
-
-<strong>Note:</strong> This plugin is an addon of [Divi Page Builder](https://www.elegantthemes.com/gallery/divi/) and will only work with Divi Page Builder installed.
-
-### Like Layouts for Divi Plugin?
-
-Don't forget to rate us on [WordPress](https://wordpress.org/support/plugin/layouts-for-divi/reviews/?filter=5).
+It takes 30 seconds and means the world to us — [leave a ★★★★★ review on WordPress.org](https://wordpress.org/support/plugin/layouts-for-divi/reviews/?filter=5).
 
 == Installation ==
 
@@ -138,31 +118,37 @@ Don't forget to rate us on [WordPress](https://wordpress.org/support/plugin/layo
 
 1. Go to Plugins > <strong>Add New</strong>
 2. Search for <strong>Layouts for Divi</strong>
-3. Click on the <strong>Install Now</strong> Button
-4. Click on <strong>Activate Now</strong> After Installed in the Backend 
+3. Click <strong>Install Now</strong>
+4. Click <strong>Activate</strong>
 
-<strong>From WordPress.org</strong>
+<strong>Manual Install via WordPress.org</strong>
 
 1. Download <strong>[Layouts for Divi](https://downloads.wordpress.org/plugin/layouts-for-divi.zip)</strong>
-2. Upload the <strong>'layouts-for-divi'</strong> folder to the /wp-content/plugins/ directory
-3. Activate <strong>Layouts for Divi</strong> plugin from your plugins page
+2. Upload the <strong>'layouts-for-divi'</strong> folder to /wp-content/plugins/
+3. Activate <strong>Layouts for Divi</strong> from your Plugins page
 
 == Frequently Asked Questions ==
 
-= For which purposes can I use Layouts for Divi? = 
-Layouts for Divi give you top-niche ready-made landing pages or designs for your favorite WordPress Divi Page Builder.
+= Do I need the Divi theme or just the Divi Builder plugin? =
+Either works. Layouts for Divi is compatible with both the Divi theme and the standalone Divi Builder plugin.
 
-= Can I import these ready-made layouts to my Divi library? = 
- Yes, you can. Layouts for Divi plugin allow you to import any design to the Divi library and pages too!
+= Can I import layouts into my Divi library? =
+Absolutely. You can import any layout directly into your Divi Template Library with one click, or create a brand-new page from it.
 
-= Are all the starter templates Free? =
-Yes, get over 30+ free ready-to-use websites as of now. You can pick a website template that suits your needs.
+= Are all the layouts really free? =
+Yes — 30+ layouts and counting, all completely free for personal and commercial use.
 
-= Can I change color or customize imported layouts as per my wish? =
-Yes, of course. Why not! You are free to use/modify it as per your project requirements.
+= Can I customise the layouts after importing? =
+Of course! Every layout opens in the full Divi Builder where you can change colours, fonts, images, and content to match your brand exactly.
 
-= Where can I ask for help? =
-You can reach out via the official [support forum](https://wordpress.org/support/plugin/layouts-for-divi/) on WordPress.org.
+= Will Layouts for Divi slow down my website? =
+No. The plugin only loads assets on the admin Layouts page. Your front end is completely unaffected.
+
+= For which kinds of websites can I use these layouts? =
+Any website that runs the Divi Builder: agency sites, portfolios, restaurants, e-commerce stores, landing pages, blogs, and more.
+
+= Where can I get support? =
+Visit the official [WordPress.org support forum](https://wordpress.org/support/plugin/layouts-for-divi/) or [contact Techeshta directly](https://www.techeshta.com/contact-us/).
 
 == Screenshots ==
 
@@ -172,6 +158,29 @@ You can reach out via the official [support forum](https://wordpress.org/support
 4. Layouts for Divi - Install Preview
 
 == Changelog ==
+
+= 1.2 =
+Release date: June 23rd, 2026
+
+* Security: Removed unauthenticated AJAX access — handle_import and handle_sync now require a logged-in user
+* Security: Added nonce verification before reading POST data in all AJAX handlers
+* Security: Added wp_unslash() to all $_POST reads before sanitization
+* Security: Added current_user_can() capability checks to handle_import (edit_posts) and template_sync (manage_options)
+* Security: Fixed SQL injection vulnerability — replaced raw query with $wpdb->prepare() in create_page()
+* Security: Replaced file_get_contents() for remote URLs with wp_remote_get() (WordPress HTTP API)
+* Security: Sanitized $_GET['page'] with sanitize_key() before use
+* Security: Added nonce to sync AJAX call in admin.js
+* PCP: Moved lfd_layouts_function() out of lfd_menu() method — now a proper class method lfd_layouts_page()
+* PCP: Changed menu capability from 'administrator' (role) to 'manage_options' (capability)
+* PCP: Fixed wp_register_style() version from float 1.0 to string '2.0'; corrected 5th parameter to 'all'
+* PCP: Replaced exit with wp_die() at end of all AJAX handlers
+* PCP: Removed enqueue of unregistered script lfd-admin-live-script
+* Code: Fixed return esc_html_e() bug — esc_html_e() returns void; changed to return 0
+* Code: Removed unused $result = array() variable in create_page()
+* Code: Cleaned up return $result = array(...) to return array(...) in lfd_get_new_image()
+* Code: Removed leftover commented-out include_once lines in lfd_include_files()
+* Code: Added strict true comparison to in_array() calls
+* Code: Cast $template_id and $media_id to int before use in sprintf() URL builders
 
 = 1.1.3 =
 Release date: May 4th, 2026

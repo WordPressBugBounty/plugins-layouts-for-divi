@@ -89,6 +89,7 @@ jQuery(document).ready(function () {
             url: ajaxurl,
             data: {
                 action: 'handle_sync',
+                nonce: js_object.nonce,
             },
             beforeSend: function () {
                 jQuery('.lfd-sync-btn').text(js_object.lfd_sync);

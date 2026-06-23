@@ -1,181 +1,200 @@
 <?php
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
  * Handle Remote API requests.
- *
  */
 class Layouts_Divi_Remote {
 
-    protected static $lfd_instance = NULL;
+	protected static $lfd_instance = null;
 
-    const TRANSIENT_TEMPLATE = 'et_pb_layout';
-    const TRANSIENT_CATEGORY = 'layout_category';
-    const TEMPLATES = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/templates';
-    const CATEGORIES = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/categories';
+	const TRANSIENT_TEMPLATE = 'et_pb_layout';
+	const TRANSIENT_CATEGORY = 'layout_category';
+	const TEMPLATES          = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/templates';
+	const CATEGORIES         = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/categories';
 
-    public function __construct() {
-        $this->hooks();
-    }
+	/**
+	 * API template URL.
+	 *
+	 * @var string
+	 */
+	private static $template_url = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/template/byid/?id=%d';
 
-    /**
-     * Access plugin instance. You can create further instances by calling
-     */
-    public static function lfd_get_instance() {
-        if (NULL === self::$lfd_instance) {
-            self::$lfd_instance = new self;
-        }
+	/**
+	 * API image URL.
+	 *
+	 * @var string
+	 */
+	private static $image_url = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/image/byid/?id=%d';
 
-        return self::$lfd_instance;
-    }
+	public function __construct() {
+		$this->hooks();
+	}
 
-    /**
-     * API template URL.
-     * Holds the URL for getting a single template data.
-     *
-     * @var string API template URL.
-     */
-    private static $template_url = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/template/byid/?id=%d';
-    private static $image_url = 'https://layoutsfordivibuilder.com/wp-json/layoutsfordivi/v1/image/byid/?id=%d';
+	/**
+	 * Access plugin instance.
+	 *
+	 * @return self
+	 */
+	public static function lfd_get_instance() {
+		if ( null === self::$lfd_instance ) {
+			self::$lfd_instance = new self();
+		}
+		return self::$lfd_instance;
+	}
 
-    /**
-     * Initialize
-     */
-    public function hooks() {
-        add_action('wp_ajax_handle_sync', array($this, 'template_sync'));
-        add_action('wp_ajax_nopriv_handle_sync', array($this, 'template_sync'));
-    }
+	/**
+	 * Initialize
+	 */
+	public function hooks() {
+		add_action( 'wp_ajax_handle_sync', array( $this, 'template_sync' ) );
+	}
 
-    /**
-     * Get a sync templates list.
-     * @return mixed|\WP_Error
-     */
-    public function template_sync() {
+	/**
+	 * Sync templates list via AJAX.
+	 */
+	public function template_sync() {
 
-        $response = $this->templates_list($force_update = true);
-        $response = $this->categories_list($force_update = true);
+		// Verify nonce.
+		if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'ajax-nonce' ) ) {
+			echo 'error';
+			wp_die();
+		}
 
-        if ($response) {
-            echo 'success';
-        } else {
-            echo 'error';
-        }
-    }
+		// Capability check.
+		if ( ! current_user_can( 'manage_options' ) ) {
+			echo 'error';
+			wp_die();
+		}
 
-    /**
-     * Get a templates list.
-     * @return mixed|\WP_Error
-     */
-    public function templates_list($force_update = false) {
+		$this->templates_list( true );
+		$response = $this->categories_list( true );
 
-        $response = get_transient(self::TRANSIENT_TEMPLATE);
+		if ( $response ) {
+			echo 'success';
+		} else {
+			echo 'error';
+		}
 
-        if (!$response || $force_update) {
+		wp_die();
+	}
 
-            $request = wp_remote_request(self::TEMPLATES);
+	/**
+	 * Get a templates list.
+	 *
+	 * @param bool $force_update Whether to bypass the transient cache.
+	 * @return mixed|\WP_Error
+	 */
+	public function templates_list( $force_update = false ) {
 
-            // Check Error not exist
-            if (!is_wp_error($request)) {
-                $response = json_decode(wp_remote_retrieve_body($request), true);
-                set_transient(self::TRANSIENT_TEMPLATE, $response, 12 * HOUR_IN_SECONDS);
-            } else {
-                $response = $request->get_error_message();
-            }
-        }
+		$response = get_transient( self::TRANSIENT_TEMPLATE );
 
-        return $response;
-    }
+		if ( ! $response || $force_update ) {
+			$request = wp_remote_request( self::TEMPLATES );
 
-    /**
-     * Get a templates categories.
-     * @return mixed|\WP_Error
-     */
-    public function categories_list($force_update = false) {
-        $response = get_transient(self::TRANSIENT_CATEGORY);
+			if ( ! is_wp_error( $request ) ) {
+				$response = json_decode( wp_remote_retrieve_body( $request ), true );
+				set_transient( self::TRANSIENT_TEMPLATE, $response, 12 * HOUR_IN_SECONDS );
+			} else {
+				$response = $request->get_error_message();
+			}
+		}
 
-        if (!$response || $force_update) {
+		return $response;
+	}
 
-            $request = wp_remote_request(self::CATEGORIES);
+	/**
+	 * Get template categories.
+	 *
+	 * @param bool $force_update Whether to bypass the transient cache.
+	 * @return mixed|\WP_Error
+	 */
+	public function categories_list( $force_update = false ) {
+		$response = get_transient( self::TRANSIENT_CATEGORY );
 
-            // Check Error not exist
-            if (!is_wp_error($request)) {
-                $response = json_decode(wp_remote_retrieve_body($request), true);
-                set_transient(self::TRANSIENT_CATEGORY, $response, 1 * HOUR_IN_SECONDS);
-            } else {
-                $response = $request->get_error_message();
-            }
-        }
-        return $response;
-    }
+		if ( ! $response || $force_update ) {
+			$request = wp_remote_request( self::CATEGORIES );
 
-    /**
-     * Get a single template content.
-     *
-     * @param int $template_id Template ID.
-     * @return mixed|\WP_Error
-     */
-    public function get_template_content($template_id) {
-        $url = sprintf(self::$template_url, $template_id);
+			if ( ! is_wp_error( $request ) ) {
+				$response = json_decode( wp_remote_retrieve_body( $request ), true );
+				set_transient( self::TRANSIENT_CATEGORY, $response, 1 * HOUR_IN_SECONDS );
+			} else {
+				$response = $request->get_error_message();
+			}
+		}
 
-        $response = wp_remote_request($url);
+		return $response;
+	}
 
-        if (is_wp_error($response)) {
-            return $response;
-        }
+	/**
+	 * Get a single template content.
+	 *
+	 * @param int $template_id Template ID.
+	 * @return mixed|\WP_Error
+	 */
+	public function get_template_content( $template_id ) {
+		$url = sprintf( self::$template_url, (int) $template_id );
 
-        $response_code = (int) wp_remote_retrieve_response_code($response);
-        if (200 !== $response_code) {
-            return new \WP_Error('response_code_error', sprintf('The request returned with a status code of %s.', $response_code));
-        }
+		$response = wp_remote_request( $url );
 
-        $template_content = json_decode(wp_remote_retrieve_body($response), true);
-        if (isset($template_content['message']) && !empty($template_content['message'])) {
-            return $template_content['message'];
-        }
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
 
-        if (isset($template_content['error'])) {
-            return new \WP_Error('response_error', $template_content['error']);
-        }
+		$response_code = (int) wp_remote_retrieve_response_code( $response );
+		if ( 200 !== $response_code ) {
+			return new \WP_Error( 'response_code_error', sprintf( 'The request returned with a status code of %s.', $response_code ) );
+		}
 
-        if (empty($template_content['title']) && empty($template_content['template'])) {
-            return new \WP_Error('template_data_error', 'An invalid data was returned.');
-        }
+		$template_content = json_decode( wp_remote_retrieve_body( $response ), true );
+		if ( isset( $template_content['message'] ) && ! empty( $template_content['message'] ) ) {
+			return $template_content['message'];
+		}
 
-        return $template_content;
-    }
+		if ( isset( $template_content['error'] ) ) {
+			return new \WP_Error( 'response_error', $template_content['error'] );
+		}
 
-    /**
-     * Get a single Image.
-     *
-     * @param int $media_id Media ID.
-     * @return mixed|\WP_Error
-     */
-    public function get_media_image($media_id) {
-        $url = sprintf(self::$image_url, $media_id);
-        $response = wp_remote_request($url);
-        if (is_wp_error($response)) {
-            return $response;
-        }
+		if ( empty( $template_content['title'] ) && empty( $template_content['template'] ) ) {
+			return new \WP_Error( 'template_data_error', 'An invalid data was returned.' );
+		}
 
-        $response_code = (int) wp_remote_retrieve_response_code($response);
-        if (200 !== $response_code) {
-            return new \WP_Error('response_code_error', sprintf('The request returned with a status code of %s.', $response_code));
-        }
+		return $template_content;
+	}
 
-        $image_array = json_decode(wp_remote_retrieve_body($response), true);
-        if (isset($image_array['msg']) && !empty($image_array['msg']) && $image_array['msg'] == 'Missing Attachment') {
-            return $image_array['msg'];
-        }
+	/**
+	 * Get a single image URL by media ID.
+	 *
+	 * @param int $media_id Media ID.
+	 * @return mixed|\WP_Error
+	 */
+	public function get_media_image( $media_id ) {
+		$url = sprintf( self::$image_url, (int) $media_id );
 
-        if (isset($image_array) && !empty($image_array)) {
-            return $image_array['image_url'];
-        }
+		$response = wp_remote_request( $url );
 
-        return $image_array;
-    }
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
 
+		$response_code = (int) wp_remote_retrieve_response_code( $response );
+		if ( 200 !== $response_code ) {
+			return new \WP_Error( 'response_code_error', sprintf( 'The request returned with a status code of %s.', $response_code ) );
+		}
+
+		$image_array = json_decode( wp_remote_retrieve_body( $response ), true );
+		if ( isset( $image_array['msg'] ) && ! empty( $image_array['msg'] ) && 'Missing Attachment' === $image_array['msg'] ) {
+			return $image_array['msg'];
+		}
+
+		if ( isset( $image_array ) && ! empty( $image_array ) ) {
+			return $image_array['image_url'];
+		}
+
+		return $image_array;
+	}
 }
 
 new Layouts_Divi_Remote();
