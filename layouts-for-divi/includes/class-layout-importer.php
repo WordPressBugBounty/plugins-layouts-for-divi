@@ -41,7 +41,7 @@ class Layouts_Divi_Importer {
 			wp_die();
 		}
 
-		$template_id = isset( $_POST['template_id'] ) ? sanitize_text_field( wp_unslash( $_POST['template_id'] ) ) : '';
+		$template_id = isset( $_POST['template_id'] ) ? absint( wp_unslash( $_POST['template_id'] ) ) : 0;
 		$with_page   = isset( $_POST['with_page'] ) ? sanitize_text_field( wp_unslash( $_POST['with_page'] ) ) : '';
 
 		$template = Layouts_Divi_Remote::lfd_get_instance()->get_template_content( $template_id );
@@ -115,6 +115,7 @@ class Layouts_Divi_Importer {
 		}
 
 		if ( ! empty( $with_page ) ) {
+			$with_page = sanitize_text_field( $with_page );
 
 			// Create post object.
 			$args = array(

@@ -3,7 +3,9 @@
  * Plugin Name: Layouts for Divi
  * Plugin URI: https://www.techeshta.com/product/layouts-for-divi/
  * Description: 30+ Free Layouts for Divi Templates. One-click import. No coding skills required.
- * Version: 1.2
+ * Version: 1.2.1
+ * Requires at least: 5.8
+ * Tested up to: 7.1
  * Author: Techeshta
  * Author URI: https://www.techeshta.com
  * License: GPLv2 or later
@@ -47,7 +49,6 @@ class Layouts_For_Divi {
 	 * Initialize
 	 */
 	public function hooks() {
-		add_action( 'plugins_loaded', array( $this, 'lfd_load_language_files' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'lfd_admin_scripts' ) );
 	}
 
@@ -57,13 +58,6 @@ class Layouts_For_Divi {
 	public function lfd_include_files() {
 		require_once LFD_DIR . 'includes/class-layout-importer.php';
 		require_once LFD_DIR . 'includes/api/class-layouts-remote.php';
-	}
-
-	/**
-	 * Loads plugin textdomain.
-	 */
-	public function lfd_load_language_files() {
-		load_plugin_textdomain( LFD_TEXTDOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	/**
@@ -140,10 +134,10 @@ class Layouts_For_Divi {
 	 * Enqueue admin panel required CSS/JS.
 	 */
 	public function lfd_admin_scripts() {
-		wp_register_style( 'lfd-admin-stylesheets', LFD_URL . 'assets/css/admin.css', array(), '1.2', 'all' );
-		wp_register_style( 'lfd-toastify-stylesheets', LFD_URL . 'assets/css/toastify.css', array(), '1.2', 'all' );
-		wp_register_script( 'lfd-admin-script', LFD_URL . 'assets/js/admin.js', array( 'jquery' ), '1.2', true );
-		wp_register_script( 'lfd-toastify-script', LFD_URL . 'assets/js/toastify.js', array( 'jquery' ), '1.2', true );
+		wp_register_style( 'lfd-admin-stylesheets', LFD_URL . 'assets/css/admin.css', array(), '1.2.1', 'all' );
+		wp_register_style( 'lfd-toastify-stylesheets', LFD_URL . 'assets/css/toastify.css', array(), '1.2.1', 'all' );
+		wp_register_script( 'lfd-admin-script', LFD_URL . 'assets/js/admin.js', array( 'jquery' ), '1.2.1', true );
+		wp_register_script( 'lfd-toastify-script', LFD_URL . 'assets/js/toastify.js', array( 'jquery' ), '1.2.1', true );
 		wp_localize_script(
 			'lfd-admin-script',
 			'js_object',

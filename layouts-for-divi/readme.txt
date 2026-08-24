@@ -2,9 +2,9 @@
 Contributors: techeshta, alkesh7, vastarpara, hadihirpara
 Tags: divi, divi templates, divi page builder, page builder, landing page
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,6 +158,12 @@ Visit the official [WordPress.org support forum](https://wordpress.org/support/p
 4. Layouts for Divi - Install Preview
 
 == Changelog ==
+
+= 1.2.1 =
+Release date: August 24th, 2026
+
+* Updated compatibility for WordPress 7.1.
+* Removed the obsolete manual textdomain loading call.
 
 = 1.2 =
 Release date: June 23rd, 2026
