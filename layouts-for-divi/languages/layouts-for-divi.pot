@@ -1,168 +1,229 @@
-#, fuzzy
+# Copyright (C) 2026 Techeshta
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Layouts for Divi\n"
-"Report-Msgid-Bugs-To: info@techeshta.com\n"
-"POT-Creation-Date: 2022-05-25 12:20+0530\n"
-"PO-Revision-Date: 2019-09-19 22:36-0700\n"
-"Last-Translator: Techeshta\n"
-"Language-Team: Techeshta <info@techeshta.com>\n"
-"Language: en\n"
+"Project-Id-Version: Layouts for Divi 2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/layouts-for-divi\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_html__\n"
-"X-Poedit-SearchPath-0: .\n"
+"POT-Creation-Date: 2026-09-24T12:34:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: layouts-for-divi\n"
 
-#: includes/class-layout-importer.php:63
-msgid "Invalid Template ID."
-msgstr ""
-
-#: includes/layouts.php:3 layouts-for-divi.php:109 layouts-for-divi.php:118
-#: layouts-for-divi.php:136
+#. Plugin Name of the plugin
+#: layouts-for-divi.php
+#: includes/layouts.php:16
+#: layouts-for-divi.php:143
+#: layouts-for-divi.php:150
+#: layouts-for-divi.php:167
 msgid "Layouts for Divi"
 msgstr ""
 
-#: includes/layouts.php:7
-msgid "Divi Template Kits:"
+#. Plugin URI of the plugin
+#: layouts-for-divi.php
+msgid "https://www.techeshta.com/product/layouts-for-divi/"
 msgstr ""
 
-#: includes/layouts.php:9
-msgid "Sync Now"
+#. Description of the plugin
+#: layouts-for-divi.php
+msgid "30+ Free Layouts for Divi Templates. One-click import. No coding skills required."
 msgstr ""
 
-#: includes/layouts.php:18
-msgid "Browse by Industry"
+#. Author of the plugin
+#: layouts-for-divi.php
+msgid "Techeshta"
+msgstr ""
+
+#. Author URI of the plugin
+#: layouts-for-divi.php
+msgid "https://www.techeshta.com"
+msgstr ""
+
+#: includes/api/class-layouts-remote.php:174
+#: includes/layouts.php:178
+msgid "Unable to load the layouts library. Please try again later."
+msgstr ""
+
+#. translators: %d: HTTP status code.
+#: includes/api/class-layouts-remote.php:199
+#: includes/api/class-layouts-remote.php:240
+#, php-format
+msgid "The request returned with a status code of %d."
+msgstr ""
+
+#: includes/api/class-layouts-remote.php:204
+#: includes/api/class-layouts-remote.php:216
+#: includes/class-layout-importer.php:110
+msgid "An invalid data was returned."
+msgstr ""
+
+#: includes/class-layout-importer.php:64
+msgid "Security check failed."
+msgstr ""
+
+#: includes/class-layout-importer.php:72
+msgid "Permission denied."
 msgstr ""
 
 #: includes/layouts.php:20
+msgid "Divi Template Kits:"
+msgstr ""
+
+#: includes/layouts.php:22
+msgid "Sync Now"
+msgstr ""
+
+#: includes/layouts.php:31
+msgid "Browse by Industry"
+msgstr ""
+
+#: includes/layouts.php:33
 msgid "All"
 msgstr ""
 
-#: includes/layouts.php:50
+#: includes/layouts.php:61
 msgid "PRO"
 msgstr ""
 
-#: includes/layouts.php:52
+#: includes/layouts.php:63
 msgid "FREE"
 msgstr ""
 
-#: includes/layouts.php:57
+#: includes/layouts.php:68
 msgid "Preview"
 msgstr ""
 
-#: includes/layouts.php:58
+#: includes/layouts.php:69
 msgid "Install"
 msgstr ""
 
-#: includes/layouts.php:70 includes/layouts.php:124
+#: includes/layouts.php:81
+#: includes/layouts.php:135
 msgid "This template is premium version"
 msgstr ""
 
-#: includes/layouts.php:73 includes/layouts.php:127
+#: includes/layouts.php:84
+#: includes/layouts.php:138
 msgid "Buy Now"
 msgstr ""
 
-#: includes/layouts.php:74 includes/layouts.php:82 includes/layouts.php:128
-#: includes/layouts.php:137
+#: includes/layouts.php:85
+#: includes/layouts.php:93
+#: includes/layouts.php:139
+#: includes/layouts.php:148
 msgid "Edit Template"
 msgstr ""
 
-#: includes/layouts.php:78 includes/layouts.php:133
+#: includes/layouts.php:89
+#: includes/layouts.php:144
 msgid "Import this template via one click"
 msgstr ""
 
-#: includes/layouts.php:81 includes/layouts.php:136
+#: includes/layouts.php:92
+#: includes/layouts.php:147
 msgid "Import Template"
 msgstr ""
 
-#: includes/layouts.php:85 includes/layouts.php:140
+#: includes/layouts.php:96
+#: includes/layouts.php:151
 msgid "OR"
 msgstr ""
 
-#: includes/layouts.php:88 includes/layouts.php:143
+#: includes/layouts.php:99
+#: includes/layouts.php:154
 msgid "Create a new page from this template"
 msgstr ""
 
-#: includes/layouts.php:90 includes/layouts.php:146
+#: includes/layouts.php:100
+#: includes/layouts.php:155
+msgid "Enter a Page Name"
+msgstr ""
+
+#: includes/layouts.php:101
+#: includes/layouts.php:157
 msgid "Create New Page"
 msgstr ""
 
-#: includes/layouts.php:96
+#: includes/layouts.php:107
 msgid "Your template is successfully imported!"
 msgstr ""
 
-#: includes/layouts.php:97 includes/layouts.php:153
+#: includes/layouts.php:108
+#: includes/layouts.php:164
 msgid "Edit Page"
 msgstr ""
 
-#: includes/layouts.php:100 includes/layouts.php:157
+#: includes/layouts.php:111
+#: includes/layouts.php:168
 msgid "Something went wrong!"
 msgstr ""
 
-#: includes/layouts.php:105
+#: includes/layouts.php:116
 msgid "Open Preview in New Tab"
 msgstr ""
 
-#: includes/layouts.php:151 layouts-for-divi.php:155
+#: includes/layouts.php:162
+#: layouts-for-divi.php:188
 msgid "Your page is successfully imported!"
 msgstr ""
 
-#: layouts-for-divi.php:109
+#: layouts-for-divi.php:143
 msgid " plugin not working because you need to activate the Divi builder plugin."
 msgstr ""
 
-#: layouts-for-divi.php:110
+#: layouts-for-divi.php:144
 msgid "Activate Divi Now"
 msgstr ""
 
-#: layouts-for-divi.php:118
+#: layouts-for-divi.php:150
 msgid " plugin not working because you need to install the Divi Builder plugin"
 msgstr ""
 
-#: layouts-for-divi.php:119
+#: layouts-for-divi.php:151
 msgid "Get Divi"
 msgstr ""
 
-#: layouts-for-divi.php:136
+#: layouts-for-divi.php:167
 msgid " plugin not working because you are using an old version of Divi Builder."
 msgstr ""
 
-#: layouts-for-divi.php:137
+#: layouts-for-divi.php:168
 msgid "Get Latest Divi"
 msgstr ""
 
-#: layouts-for-divi.php:153
+#: layouts-for-divi.php:186
 msgid "Importing..."
 msgstr ""
 
-#: layouts-for-divi.php:154
+#: layouts-for-divi.php:187
 msgid "Template is successfully imported!."
 msgstr ""
 
-#: layouts-for-divi.php:156
+#: layouts-for-divi.php:189
 msgid "Please Enter Page Name."
 msgstr ""
 
-#: layouts-for-divi.php:157
+#: layouts-for-divi.php:190
 msgid "Syncing..."
 msgstr ""
 
-#: layouts-for-divi.php:158
+#: layouts-for-divi.php:191
 msgid "Templates library refreshed"
 msgstr ""
 
-#: layouts-for-divi.php:159
+#: layouts-for-divi.php:192
 msgid "Error in library Syncing"
 msgstr ""
 
-#: layouts-for-divi.php:160
+#: layouts-for-divi.php:193
 msgid "Something went wrong. Please try again."
 msgstr ""
 
-#: layouts-for-divi.php:179
+#: layouts-for-divi.php:216
+#: layouts-for-divi.php:217
 msgid "Layouts"
 msgstr ""

@@ -81,6 +81,22 @@ jQuery(document).ready(function () {
         jQuery('input[type=text]').val('');
     });
 
+    //Show the sync result, then reload so the refreshed library renders.
+    function lfdSyncDone(ok) {
+        setTimeout(function () {
+            Toastify({
+                text: ok ? lfd_js_object.lfd_sync_suc : lfd_js_object.lfd_sync_fai,
+                gravity: "right",
+                duration: 4500,
+                close: true,
+                backgroundColor: "linear-gradient(135deg, rgb( 99, 89, 241 ) 0%, rgb( 49, 181, 251 ) 100%)",
+            }).showToast();
+        }, 2000);
+        setTimeout(function () {
+            window.location.href = lef_cur_url;
+        }, 5000);
+    }
+
     //sync latest template
     jQuery(".lfd-sync-btn").on('click', function () {
 
@@ -88,43 +104,19 @@ jQuery(document).ready(function () {
             type: 'post',
             url: ajaxurl,
             data: {
-                action: 'handle_sync',
-                nonce: js_object.nonce,
+                action: 'lfd_handle_sync',
+                nonce: lfd_js_object.nonce,
             },
             beforeSend: function () {
-                jQuery('.lfd-sync-btn').text(js_object.lfd_sync);
+                jQuery('.lfd-sync-btn').text(lfd_js_object.lfd_sync);
             },
             success: function (res) {
-                var res = res.slice(0, -1);
-                if (res == 'success') {
-                    setTimeout(function () {
-                        Toastify({
-                            text: js_object.lfd_sync_suc,
-                            gravity: "right",
-                            duration: 4500,
-                            close: true,
-                            backgroundColor: "linear-gradient(135deg, rgb( 99, 89, 241 ) 0%, rgb( 49, 181, 251 ) 100%)",
-                        }).showToast();
-                    }, 2000);
-                    setTimeout(function () {
-                        window.location.href = lef_cur_url;
-                    }, 5000);
-                } else {
-                    setTimeout(function () {
-                        Toastify({
-                            text: js_object.lfd_sync_fai,
-                            gravity: "right",
-                            duration: 4500,
-                            close: true,
-                            backgroundColor: "linear-gradient(135deg, rgb( 99, 89, 241 ) 0%, rgb( 49, 181, 251 ) 100%)",
-                        }).showToast();
-                    }, 2000);
-                    setTimeout(function () {
-                        window.location.href = lef_cur_url;
-                    }, 5000);
-                }
+                // The handler prints exactly "success" or "error".
+                lfdSyncDone(jQuery.trim(res) === 'success');
             },
-
+            error: function () {
+                lfdSyncDone(false);
+            },
         });
     });
 
@@ -137,10 +129,10 @@ jQuery(document).ready(function () {
             type: 'post',
             url: ajaxurl,
             data: {
-                action: 'handle_import',
+                action: 'lfd_handle_import',
                 template_id: template_id,
                 with_page: with_page,
-                nonce: js_object.nonce,
+                nonce: lfd_js_object.nonce,
             },
             beforeSend: function () {
                 jQuery('.lfd-create-page-btn').addClass('lfd-disabled');
@@ -149,12 +141,18 @@ jQuery(document).ready(function () {
             },
             success: function (result) {
                 jQuery(".lfd-loader").hide();
-                if (result == 0) {
-                    jQuery(".lfd-msg").text(js_object.lfd_error);
-                } else {
-                    jQuery(".lfd-msg").text(js_object.lfd_tem_msg);
+                // The handler prints the new post ID on success, or an error message.
+                result = jQuery.trim(result);
+                if (/^[1-9][0-9]*$/.test(result)) {
+                    jQuery(".lfd-msg").text(lfd_js_object.lfd_tem_msg);
                     jQuery(".lfd-edit-template").show().attr("href", lef_res + 'post.php?post=' + result + "&action=edit");
+                } else {
+                    jQuery(".lfd-msg").text(result || lfd_js_object.lfd_error);
                 }
+            },
+            error: function () {
+                jQuery(".lfd-loader").hide();
+                jQuery(".lfd-msg").text(lfd_js_object.lfd_error);
             },
             setTimeout: 1000,
         });
@@ -174,7 +172,7 @@ jQuery(document).ready(function () {
 
         //check page name not empty
         if (with_page == "") {
-            alert(js_object.lfd_crt_page);
+            alert(lfd_js_object.lfd_crt_page);
             jQuery(".lfd-page-name-" + template_id).addClass("lef-required");
             jQuery(".lfd-page-" + template_id).addClass("lef-required");
             return false;
@@ -184,10 +182,10 @@ jQuery(document).ready(function () {
             type: 'post',
             url: ajaxurl,
             data: {
-                action: 'handle_import',
+                action: 'lfd_handle_import',
                 template_id: template_id,
                 with_page: with_page,
-                nonce: js_object.nonce,
+                nonce: lfd_js_object.nonce,
             },
             beforeSend: function () {
                 jQuery('.lfd-import-btn').addClass('lfd-disabled');
@@ -197,20 +195,20 @@ jQuery(document).ready(function () {
             },
             success: function (result) {
                 jQuery(".lfd-page-create, .lfd-loader-page").hide();
-                if (typeof result == 'string') {
-                    if (jQuery.isNumeric(result)) {
-                        if (result == 0) {
-                            jQuery(".lfd-page-error").show();
-                            jQuery(".lfd-error").text(js_object.lfd_error);
-                        } else {
-                            jQuery(".lfd-page-edit").show();
-                            jQuery(".lfd-edit-page").attr("href", lef_res + 'post.php?post=' + result + "&action=edit");
-                        }
-                    } else {
-                        jQuery(".lfd-page-error").show();
-                        jQuery(".lfd-error").text(result);
-                    }
+                // The handler prints the new post ID on success, or an error message.
+                result = jQuery.trim(result);
+                if (/^[1-9][0-9]*$/.test(result)) {
+                    jQuery(".lfd-page-edit").show();
+                    jQuery(".lfd-edit-page").attr("href", lef_res + 'post.php?post=' + result + "&action=edit");
+                } else {
+                    jQuery(".lfd-page-error").show();
+                    jQuery(".lfd-error").text(result || lfd_js_object.lfd_error);
                 }
+            },
+            error: function () {
+                jQuery(".lfd-page-create, .lfd-loader-page").hide();
+                jQuery(".lfd-page-error").show();
+                jQuery(".lfd-error").text(lfd_js_object.lfd_error);
             },
             setTimeout: 1000,
         });

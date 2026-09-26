@@ -4,7 +4,7 @@ Tags: divi, divi templates, divi page builder, page builder, landing page
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.2.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,7 +110,7 @@ We're active and responsive. If you run into anything, head to our [Support Foru
 
 ### Love Layouts for Divi?
 
-It takes 30 seconds and means the world to us — [leave a ★★★★★ review on WordPress.org](https://wordpress.org/support/plugin/layouts-for-divi/reviews/?filter=5).
+It takes 30 seconds and means the world to us — [leave a review on WordPress.org](https://wordpress.org/support/plugin/layouts-for-divi/reviews/#new-post).
 
 == Installation ==
 
@@ -158,6 +158,17 @@ Visit the official [WordPress.org support forum](https://wordpress.org/support/p
 4. Layouts for Divi - Install Preview
 
 == Changelog ==
+
+= 2.0 =
+Release Date: September 24th, 2026
+
+* Fixed: Layout import/sync conflicts and error reporting.
+* Fixed: Import failures, missing images, and temporary API outage handling.
+* Security: Improved import permissions, image validation, and title sanitization.
+* Improved: Faster layout imports by avoiding duplicate image downloads.
+* Updated: WordPress 7.1.2 compatibility.
+* Code: WordPress Coding Standards cleanup and documentation.
+
 
 = 1.2.1 =
 Release date: August 24th, 2026
